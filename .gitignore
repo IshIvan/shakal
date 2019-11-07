@@ -1,2 +1,2 @@
-test/**.gz
-test/**.br
+test/**/**.gz
+test/**/**.br
