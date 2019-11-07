@@ -1,6 +1,6 @@
 {
   "name": "shakal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Library for compression",
   "repository": {
     "type": "git",
@@ -8,7 +8,7 @@
   },
   "author": "Tinkoff Business Core Team",
   "main": "./scripts/index.js",
-  "bin": "./scripts/index.js",
+  "bin": "./bin/shakal",
   "scripts": {
     "start": "node ./scripts/index.js",
     "test": "npx rimraf ./test/**.br && npx rimraf ./test/**.gz && npm run test:gz && npm run test:br",
