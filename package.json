@@ -1,5 +1,5 @@
 {
-  "name": "@tinkoff/shakal",
+  "name": "shakal-cli",
   "version": "1.1.0",
   "description": "Library for compression",
   "repository": {

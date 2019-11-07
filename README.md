@@ -4,9 +4,9 @@
 
 ### Как использовать?
 ```bash
-npx shakal ./dist
+npx shakal-cli ./dist
 # или
-npx shakal '["dist/static", "dist/chunks"]' # json массив дирректорий
+npx shakal-cli '["dist/static", "dist/chunks"]' # json массив дирректорий
 ```
 
 #### Вариант c docker
