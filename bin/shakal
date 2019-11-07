@@ -3,6 +3,6 @@
 
 // Provide a title to the process in `ps`.
 // Due to an obscure Mac bug, do not start this title with any symbol.
-process.title = 'shakal'
+process.title = 'shakal-cli'
 
 require('../scripts/index')
