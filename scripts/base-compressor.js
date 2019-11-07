@@ -1,15 +1,19 @@
 var fs = require('fs');
 var glob = require('glob');
 
-const WORKDIRS = typeof process.env.dirs === 'string'
-    ? JSON.parse(process.env.dirs)
-    : ['dist/'];
 
-module.exports.baseCompressor = function (compressFunction, options, extension) {
-    console.log('Сжатие файлов в директориях:');
-    console.log(WORKDIRS);
+module.exports.baseCompressor = function (compressFunction, options, extension, workdirs) {
+    if (!workdirs) {
+        try {
+            workdirs = JSON.parse(process.env.dirs)
+        } catch {
+            workdirs = ['dist/']
+        }
+    }
+    console.log('Сжатие файлов '+extension+' в директориях:');
+    console.log(workdirs);
 
-    WORKDIRS.forEach(workdir => {
+    workdirs.forEach(workdir => {
         glob.sync(workdir + '**/*.?(js|json|html|css)')
             .forEach(filepath => {
                 fs.readFile(filepath, (err, buffer) => {

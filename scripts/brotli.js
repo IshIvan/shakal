@@ -6,3 +6,4 @@ compress.baseCompressor(brotli.compress, {
     quality: 11,
     lgwin: 22,
 }, '.br');
+
